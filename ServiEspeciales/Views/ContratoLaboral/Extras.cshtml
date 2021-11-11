@@ -1,0 +1,59 @@
+﻿@model ServiEspeciales.Entities.Extras
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="row">
+    <div>
+        @ViewBag.Mensaje
+    </div>
+    <br />
+    <div class="col-md-4">
+        <form asp-action="Extras">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="cedula" class="control-label">cedula</label>
+                <input asp-for="cedula" class="form-control" />
+                <span asp-validation-for="cedula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="periodolaborado" class="control-label">periodo Laborado</label>
+                <input asp-for="periodolaborado" class="form-control" />
+                <span asp-validation-for="periodolaborado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="horaslaboradas" class="control-label">Horas Total Laboradas</label>
+                <input asp-for="horaslaboradas" class="form-control" />
+                <span asp-validation-for="horaslaboradas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="horaextradiurna" class="control-label">Horas Extra Diurnas</label>
+                <input asp-for="horaextradiurna" class="form-control" />
+                <span asp-validation-for="horaextradiurna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="horaextranocturna" class="control-label">Horas Extra Nocturnas</label>
+                <input asp-for="horaextranocturna" class="form-control" />
+                <span asp-validation-for="horaextranocturna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="horaextrafestiva" class="control-label">Horas Extra Festivas</label>
+                <input asp-for="horaextrafestiva" class="form-control" />
+                <span asp-validation-for="horaextrafestiva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="horaextradominical" class="control-label">Horas Extra Dominical</label>
+                <input asp-for="horaextradominical" class="form-control" />
+                <span asp-validation-for="horaextradominical" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descuentos" class="control-label">Descuentos de nomina</label>
+                <input asp-for="descuentos" class="form-control" />
+                <span asp-validation-for="descuentos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

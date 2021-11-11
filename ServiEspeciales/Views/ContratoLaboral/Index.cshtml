@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ServiEspeciales.Entities.ContratosLaborales>
+
+@{
+    ViewData["Title"] = "Listado de Contratos";
+}
+
+<h1>Listado de Contratos</h1>
+
+<form asp-controller="ContratoLaboral" asp-action="ConsultaContrato" target="_blank">
+    <p>
+        Digite el numero de documento: <input type="text" name="Cedula" />
+        <button type="submit" class="btn text-white" style="background-color: #FF7F27;">Buscar</button>
+    </p>
+
+</form>
+<br />
+<form asp-controller="ContratoLaboral" asp-action="ConsultaSeguridad" target="_blank">
+    <p>
+        Consulte la seguridad social. Digite el numero de documento: <input type="text" name="Cedula" />
+        <button type="submit" class="btn text-white" style="background-color: #FF7F27;">Buscar</button>
+    </p>
+
+</form>
+<table class="table">
+    <thead>
+        <tr>            
+            <th>
+                @Html.DisplayNameFor(model => model.numerodocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primerapellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundoapellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primernombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundonombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechainicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechafin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usuariocreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechacreacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>            
+            <td>
+                @Html.DisplayFor(modelItem => item.numerodocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primerapellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoapellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primernombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundonombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechainicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechafin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuariocreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechacreacion)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.idcontrato">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idcontrato">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idcontrato">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

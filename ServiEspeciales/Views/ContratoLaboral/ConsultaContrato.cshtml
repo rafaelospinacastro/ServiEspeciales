@@ -1,0 +1,70 @@
+﻿@model ServiEspeciales.Entities.ReporteEmpleado
+
+@{
+    ViewData["Title"] = "Consulta de Contrato";
+}
+
+<h1>Consulta de Contrato</h1>
+<div>
+    <h4>Resultados de la Búsqueda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Tipo de Documento
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TipoDocumento)
+        </dd>
+        <dt class="col-sm-2">
+            Número de Documento
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumeroDocumento)
+        </dd>
+        <dt class="col-sm-2">
+            Apellidos y Nombres
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+        <dt class="col-sm-2">
+            No. Contrato Laboral
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumeroContrato)
+        </dd>
+        <dt class="col-sm-2">
+            Cargo
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+        <dt class="col-sm-2">
+            Riesgo Laboral (ARL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ARL)
+        </dd>
+        <dt class="col-sm-2">
+            Fecha de Inicio Contrato
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+        <dt class="col-sm-2">
+            Fecha Final de Contrato (Proyectada si se tiene)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+        <dt class="col-sm-2">
+            Salario
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Salario)
+        </dd>        
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Volver</a>
+</div>

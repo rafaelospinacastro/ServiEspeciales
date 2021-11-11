@@ -1,0 +1,48 @@
+﻿@model IList<ServiEspeciales.Entities.CalcularSeguridadSocial>
+@{
+    ViewData["Title"] = "Consulta Seguridad Social";
+}
+<h4>Seguridad Social del Empleado</h4>
+<table class="table" id="tblReporte">
+    <thead>
+        <tr>
+            <th>
+                Aporte
+            </th>
+            <th>
+                % Empleador
+            </th>
+            <th>
+                Valor $
+            </th>
+            <th>
+                % Trabajador
+            </th>
+            <th>
+                Valor $
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PorcentajeEmpleador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorEmpleador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PorcentajeTrabajador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorTrabajador)
+                </td>                
+            </tr>
+        }
+    </tbody>
+</table>
