@@ -202,22 +202,10 @@ namespace ServiEspeciales.Controllers
                 novedades.idcontrato = idcontrato;
                 novedades.idnovedadnomina = idextras;
 
-                idextras += 2;
-                NovedadesNomina novedades2 = new NovedadesNomina();
-                novedades2.usuariocreacion = "Sistema";
-                novedades2.fechacreacion = DateTime.Now;
-                novedades2.descuentos = extras.descuentos;
-                novedades2.horaextradiurna = extras.horaextradiurna;
-                novedades2.horaextranocturna = extras.horaextranocturna;
-                novedades2.horaextradominical = extras.horaextradominical;
-                novedades2.horaextrafestiva = extras.horaextrafestiva;
-                novedades2.horaslaboradas = extras.horaslaboradas;
-                novedades2.periodolaborado = extras.periodolaborado;
-                novedades2.idcontrato = idcontrato;
-                novedades2.idnovedadnomina = idextras;
+
 
                 _context.Add(novedades);
-                _context.Add(novedades2);
+                
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
 
